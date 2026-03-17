@@ -1,7 +1,7 @@
 from glob import glob
 from setuptools import setup
 
-package_name = 'ur5_sim_gz'
+package_name = 'ur5e_voice_control'
 
 setup(
     name=package_name,
@@ -43,21 +43,21 @@ setup(
     entry_points={
         'console_scripts': [
             # Speech & Voice
-            'speech_to_text_node = ur5_sim_gz.speech_to_text_node:main',
-            'tts_node_gtts = ur5_sim_gz.tts_node_gtts:main',
-            'speech_gui_node = ur5_sim_gz.speech_gui_node:main',
-            'nlu_parser_node = ur5_sim_gz.nlu_parser_node:main',
-            'beep_node = ur5_sim_gz.beep_node:main',
-            'voice_logger_node = ur5_sim_gz.voice_logger_node:main',
-            'dialog_fsm_node = ur5_sim_gz.dialog_fsm_node:main',
-            'audio_monitor_gui = ur5_sim_gz.audio_monitor_gui:main',
+            'speech_to_text_node = ur5e_voice_control.speech_to_text_node:main',
+            'tts_node_gtts = ur5e_voice_control.tts_node_gtts:main',
+            'speech_gui_node = ur5e_voice_control.speech_gui_node:main',
+            'nlu_parser_node = ur5e_voice_control.nlu_parser_node:main',
+            'beep_node = ur5e_voice_control.beep_node:main',
+            'voice_logger_node = ur5e_voice_control.voice_logger_node:main',
+            'dialog_fsm_node = ur5e_voice_control.dialog_fsm_node:main',
+            'audio_monitor_gui = ur5e_voice_control.audio_monitor_gui:main',
             
             # UR5 Control
-            'ur5_cmd_mapper_node = ur5_sim_gz.ur5_cmd_mapper_node:main',
-            'control_position_node = ur5_sim_gz.control_position_node:main',
-            'ur5_executor_node = ur5_sim_gz.ur5_executor_node:main',
-            'gripper_bridge_node = ur5_sim_gz.gripper_bridge_node:main',
-            'audio_receiver_node = ur5_sim_gz.audio_receiver_node:main',
+            'ur5_cmd_mapper_node = ur5e_voice_control.ur5_cmd_mapper_node:main',
+            'control_position_node = ur5e_voice_control.control_position_node:main',
+            'ur5_executor_node = ur5e_voice_control.ur5_executor_node:main',
+            'gripper_bridge_node = ur5e_voice_control.gripper_bridge_node:main',
+            'audio_receiver_node = ur5e_voice_control.audio_receiver_node:main',
 
         ],
     },
