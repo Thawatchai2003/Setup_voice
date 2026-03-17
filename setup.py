@@ -8,7 +8,6 @@ setup(
     version='0.0.0',
     packages=[package_name],
 
-    # Install shared files (ROS2)
     data_files=[
         # Register package in ament index
         ('share/ament_index/resource_index/packages',
@@ -21,25 +20,17 @@ setup(
         # Install all launch files
         ('share/' + package_name + '/launch',
          glob('launch/*.launch.py')),
-
-        #Install config
-        ('share/' + package_name + '/config',[
-            'config/initial_positions.yaml',
-            'config/ur5e_executor_params.yaml',
-        ]),
     ],
 
     install_requires=['setuptools'],
     zip_safe=True,
 
-    # Package metadata
     maintainer='thawatchai',
     maintainer_email='example@example.com',
     description='UR5 simulation and control tools',
     license='Apache License 2.0',
     tests_require=['pytest'],
 
-    # ROS2 Console Scripts (Nodes)
     entry_points={
         'console_scripts': [
             # Speech & Voice
@@ -51,13 +42,15 @@ setup(
             'voice_logger_node = ur5e_voice_control.voice_logger_node:main',
             'dialog_fsm_node = ur5e_voice_control.dialog_fsm_node:main',
             'audio_monitor_gui = ur5e_voice_control.audio_monitor_gui:main',
-            
+
             # UR5 Control
             'ur5_cmd_mapper_node = ur5e_voice_control.ur5_cmd_mapper_node:main',
             'control_position_node = ur5e_voice_control.control_position_node:main',
             'ur5_executor_node = ur5e_voice_control.ur5_executor_node:main',
             'gripper_bridge_node = ur5e_voice_control.gripper_bridge_node:main',
 
+            
+           
         ],
     },
 )
