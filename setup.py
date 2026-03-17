@@ -57,7 +57,6 @@ setup(
             'control_position_node = ur5e_voice_control.control_position_node:main',
             'ur5_executor_node = ur5e_voice_control.ur5_executor_node:main',
             'gripper_bridge_node = ur5e_voice_control.gripper_bridge_node:main',
-            'audio_receiver_node = ur5e_voice_control.audio_receiver_node:main',
 
         ],
     },
